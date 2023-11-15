@@ -1,0 +1,19 @@
+1. Git tags are names that point to specific commits made by the user. The difference between tags and branches are that tags are names of commits in the history of commits in a specific
+branch while branches are separate "versions" of the, usually, main production code, partially or holistically, that have their own set of commits history that "change" and are not 
+static.
+
+2. The way that git tags can help in deployment and management is that companies usually want to release sets of code to the main production unit in an organized fashion with release
+numbers like Android 13.1.2, and such. Or for IOS I am not sure how that works but it is similar I suppose even though not Linux. So in the history of commits in a branch, many of the
+commits are not going to be released as a version of the final product for a patch or major/minor update, so these tags help signify certain tags with importance and a naming convention
+to keep track of the releases and in case a patch or minor update needs to be "rolled back" as we say in AWS sometimes in class with Jared (probably not the same idea though but you get
+it maybe). And I just got some more information and an idea that if the current commit did not work, the production environment can go back to a past tagged commit until issues are fixed
+for problems in the code. 
+
+3. I would use git tags by using a labeling system to define the change type I am making to the client's production environment, so I can go back to this if I need to. Such as in linux
+when there was a 1.45.21 where the first portion is for major upates, the second for minor ones, and the last for small patches. I wouldn't need something exactly like this, it can be a 
+bit more unique but this can be one. Or Android Oreo 15. Idk something like that.
+
+4. The steps our team should take to ensure the client's production environment remains unaffected by ongoing development is to only push the code to the main branch when everyone has 
+reviewed it, and also to push in small amounts unless absolutely necessary to jump after working together. There are settings in github to have many reviews before a pull request can be
+confirmed. If the whole team has a similar naming for tags, then it will be easy for the whole team to develop the code and go back to certain commits that require "patches". The team can
+also schedule when to deploy the changes.
